@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
 
+import Header from './Header';
 import Space from './Space';
 
 const Wrapper = styled.div`
-  padding: 0 20px
+  padding: 0;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -62,6 +63,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <Header />
         <Space
           option={this.getCurrentOption()}
           onChooseOption={this.onChooseOption}
