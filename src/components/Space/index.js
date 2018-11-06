@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Choice from '../Choice';
 import {
@@ -25,5 +26,13 @@ const Space = ({ option, onChooseOption, onBack, onReset, showBackButton }) => {
     </Container>
   );
 };
+
+Space.propTypes = {
+  option: PropTypes.object.isRequired,
+  onChooseOption: PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
+  showBackButton: PropTypes.bool,
+}
 
 export default Space;
