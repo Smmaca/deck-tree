@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
 
@@ -73,5 +74,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  config: PropTypes.object.isRequired,
+};
 
 export default App;
