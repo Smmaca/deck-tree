@@ -43,7 +43,6 @@ class App extends Component {
   }
 
   onChooseOption(index) {
-    console.log('Clicked option', index);
     const { decisionRoute } = this.state;
     decisionRoute.push(index);
     this.setState({ decisionRoute });
