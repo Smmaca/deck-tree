@@ -1,0 +1,138 @@
+{
+  "name": "Excuse Deck",
+  "cards": [
+    {
+      "uuid": "48fdb971-c202-4e35-b377-3984e0bbb595",
+      "message": "I really should...",
+      "prompts": [
+        { "text": "...do the thing", "goTo": "b23be52b-4dad-408d-88e1-4dbbc0615c78" },
+        { "text": "...go to the party", "goTo": "f8947855-161f-4fbe-8d71-e6ffdbfdfe31" }
+      ]
+    },
+    {
+      "uuid": "b23be52b-4dad-408d-88e1-4dbbc0615c78",
+      "message": "Why isn't it done or being done?",
+      "prompts": [
+        { "text": "I don't want to", "goTo": "29627c8c-3010-4963-887e-b3c3b0071399" },
+        { "text": "I forgot", "goTo": "fa69fc0a-8b3f-49e0-b007-eebdef95b10b"},
+        { "text": "I'm scared", "goTo": "038c5ad9-abc7-445c-bb1d-bd24b52065b0" }
+      ]
+    },
+    {
+      "uuid": "29627c8c-3010-4963-887e-b3c3b0071399",
+      "message": "I don't give a fuck. Go do it.",
+      "prompts": []
+    },
+    {
+      "uuid": "fa69fc0a-8b3f-49e0-b007-eebdef95b10b",
+      "message": "Well go do it now!",
+      "prompts": []
+    },
+    {
+      "uuid": "038c5ad9-abc7-445c-bb1d-bd24b52065b0",
+      "message": "Why are you scared?",
+      "prompts": [
+        { "text": "People might laugh at me", "goTo": "0dd4fb13-099f-4ddc-ab6f-ee8a3bd1c46a" },
+        { "text": "I might fail", "goTo": "89a583d9-9359-4a0e-95a5-d3f7cac1ae9a" }
+      ]
+    },
+    {
+      "uuid": "0dd4fb13-099f-4ddc-ab6f-ee8a3bd1c46a",
+      "message": "Is this really true?",
+      "prompts": [
+        { "text": "Yes!", "goTo": "d064d6be-51be-49cd-a7b2-ac9f06a2f064" },
+        { "text": "I guess not...", "goTo": "f5462b42-4f23-4eab-b32d-e66e345a8bcb" }
+      ]
+    },
+    {
+      "uuid": "d064d6be-51be-49cd-a7b2-ac9f06a2f064",
+      "message": "Laugh with them! There are worse things.",
+      "prompts": []
+    },
+    {
+      "uuid": "f5462b42-4f23-4eab-b32d-e66e345a8bcb",
+      "message": "Stop making excuses and go do it.",
+      "prompts": []
+    },
+    {
+      "uuid": "89a583d9-9359-4a0e-95a5-d3f7cac1ae9a",
+      "message": "Then you can try again!",
+      "prompts": []
+    },
+    {
+      "uuid": "f8947855-161f-4fbe-8d71-e6ffdbfdfe31",
+      "message": "Why don't you want to go?",
+      "prompts": [
+        { "text": "I'm introverted", "goTo": "03648a46-813a-49a7-85aa-e139a84421be" },
+        { "text": "My friends aren't going", "goTo": "49032d0f-de16-47e9-99ca-ade9c6b7179b" },
+        { "text": "I'm unwell", "goTo": "dd82a6ae-4b4e-4fb2-91b5-d3de579eeaf3" }
+      ]
+    },
+    {
+      "uuid": "03648a46-813a-49a7-85aa-e139a84421be",
+      "message": "Think of it as practice or an opportunity for growth.",
+      "prompts": []
+    },
+    {
+      "uuid": "49032d0f-de16-47e9-99ca-ade9c6b7179b",
+      "message": "That's a shame. Will you know anybody else there?",
+      "prompts": [
+        { "text": "Maybe one or two aquaintances", "goTo": "5be60075-cc9a-4dc3-a720-f4f1dfcb14e3" },
+        { "text": "Literally. No. one.", "goTo": "984533cf-f0cc-4663-80c2-b8233719fe8b" }
+      ]
+    },
+    {
+      "uuid": "5be60075-cc9a-4dc3-a720-f4f1dfcb14e3",
+      "message": "Not all bad then? Maybe you can get to know them better.",
+      "prompts": []
+    },
+    {
+      "uuid": "984533cf-f0cc-4663-80c2-b8233719fe8b",
+      "message": "Oh dear. Do you really need to go?",
+      "prompts": [
+        { "text": "Not really", "goTo": "402d38d0-1d3d-44a7-94d8-395d3d5bc606" },
+        { "text": "Unfortunately, yes", "goTo": "0351c7b2-9baf-4d86-a481-4da2c42a38f3" }
+      ]
+    },
+    {
+      "uuid": "402d38d0-1d3d-44a7-94d8-395d3d5bc606",
+      "message": "Then I don't see why you should go.",
+      "prompts": []
+    },
+    {
+      "uuid": "0351c7b2-9baf-4d86-a481-4da2c42a38f3",
+      "message": "Well I guess that's that. You have to go, so go.",
+      "prompts": []
+    },
+    {
+      "uuid": "dd82a6ae-4b4e-4fb2-91b5-d3de579eeaf3",
+      "message": "What's the problem?",
+      "prompts": [
+        { "text": "Headache", "goTo": "0c52bc99-8859-4f0b-924e-32ae3b0261ec" },
+        { "text": "Cold", "goTo": "cbee0ced-a669-42e7-8e61-065a0e513af2" },
+        { "text": "Flu", "goTo": "a1f877c1-fe52-413b-8718-711fb61a8047" },
+        { "text": "Cancer", "goTo": "e7e19d14-b3d7-42f2-84bc-d8932e17b70d" }
+      ]
+    },
+    {
+      "uuid": "0c52bc99-8859-4f0b-924e-32ae3b0261ec",
+      "message": "Take some painkillers. You'll be fine.",
+      "prompts": []
+    },
+    {
+      "uuid": "cbee0ced-a669-42e7-8e61-065a0e513af2",
+      "message": "Take some cold medication and be hygienic so you don't spread it.",
+      "prompts": []
+    },
+    {
+      "uuid": "a1f877c1-fe52-413b-8718-711fb61a8047",
+      "message": "That's no fun. You should rest up. No parties for you. I'm sure everyone will understand.",
+      "prompts": []
+    },
+    {
+      "uuid": "e7e19d14-b3d7-42f2-84bc-d8932e17b70d",
+      "message": "F",
+      "prompts": []
+    }
+  ]
+}

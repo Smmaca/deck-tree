@@ -1,31 +1,32 @@
+import { Card } from '../../dataTypes';
 import Choice from '../Choice';
 import {
   Container,
   Heading,
 } from './styles';
 
-interface ISpaceProps {
-  option: any;
-  onChooseOption: (index: number) => void;
+interface ICardProps {
+  card: Card;
+  onChooseCardUUID: (uuid: string) => void;
   onBack: () => void;
   onReset: () => void;
   showBackButton?: boolean;
 }
 
-export default function Space({ option, onChooseOption, onBack, onReset, showBackButton }: ISpaceProps) {
-  const { options, message } = option;
+export default function PromptCard({ card, onChooseCardUUID, onBack, onReset, showBackButton }: ICardProps) {
+  const { prompts, message } = card;
 
   return (
     <Container>
       {showBackButton && <button onClick={onBack}>Back</button>}
       {message && <Heading>{message}</Heading>}
-      {(options && options.length)
-        ? options.map((option: any, index: number) => (
+      {prompts?.length
+        ? prompts.map((prompt) => (
           <Choice
-            key={option.prompt + index}
-            onClick={() => onChooseOption(index)}
+            key={prompt.goTo}
+            onClick={() => onChooseCardUUID(prompt.goTo)}
           >
-            {option.prompt}
+            {prompt.text}
           </Choice>
         ))
         : <button onClick={onReset}>Start again</button>}

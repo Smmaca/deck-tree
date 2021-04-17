@@ -1,28 +1,31 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
-
+import excuseDeck from '../decks/excuses.json';
+import { Deck } from '../dataTypes';
 import Header from './Header';
-import Space from './Space';
+import PromptCard from './PromptCard';
 import { Wrapper } from './styles';
 
-const getOption = (config: any, optionIndex: number) => {
-  return config.options[optionIndex];
-};
+export default function App() {
+  const [decisionRoute, setDecisionRoute] = useState<string[]>([]);
 
-export default function App({ config }: { config: any }) {
-  const [decisionRoute, setDecisionRoute] = useState([0]);
+  const deck: Deck = excuseDeck;
 
-  const currentOption = useMemo(() => {
-    let option = { ...config };
-    decisionRoute.forEach((routeIndex) => {
-      option = getOption(option, routeIndex);
-    });
-    return option;
-  }, [decisionRoute, config]);
+  const startingCard = useMemo(() => {
+    return deck.cards[0];
+  }, [deck]);
 
-  const onChooseOption = (index: number) => {
+  const currentCard = useMemo(() => {
+    return deck.cards.find(card => card.uuid === decisionRoute[decisionRoute.length - 1]);
+  }, [decisionRoute, deck]);
+
+  useEffect(() => {
+    setDecisionRoute([startingCard.uuid]);
+  }, [startingCard]);
+
+  const onChooseCardUUID = (uuid: string) => {
     const _decisionRoute = [...decisionRoute];
-    _decisionRoute.push(index);
+    _decisionRoute.push(uuid);
     setDecisionRoute(_decisionRoute);
   };
 
@@ -33,15 +36,19 @@ export default function App({ config }: { config: any }) {
   };
 
   const onReset = () => {
-    setDecisionRoute([0]);
+    setDecisionRoute([startingCard.uuid]);
   };
+
+  if (!currentCard) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Wrapper>
-      <Header />
-      <Space
-        option={currentOption}
-        onChooseOption={onChooseOption}
+      <Header title={deck.name} />
+      <PromptCard
+        card={currentCard}
+        onChooseCardUUID={onChooseCardUUID}
         onBack={onBack}
         onReset={onReset}
         showBackButton={decisionRoute.length > 1}

@@ -1,9 +1,13 @@
 import { Wrapper } from './styles';
 
-export default function Header() {
+interface IHeaderProps {
+  title: string;
+}
+
+export default function Header({ title }: IHeaderProps) {
   return (
     <Wrapper>
-      Excuse Deck
+      {title}
     </Wrapper>
   );
 }
