@@ -1,20 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 import Choice from '../Choice';
 import {
   Container,
   Heading,
 } from './styles';
 
-const Space = ({ option, onChooseOption, onBack, onReset, showBackButton }) => {
+interface ISpaceProps {
+  option: any;
+  onChooseOption: (index: number) => void;
+  onBack: () => void;
+  onReset: () => void;
+  showBackButton?: boolean;
+}
+
+export default function Space({ option, onChooseOption, onBack, onReset, showBackButton }: ISpaceProps) {
   const { options, message } = option;
+
   return (
     <Container>
       {showBackButton && <button onClick={onBack}>Back</button>}
       {message && <Heading>{message}</Heading>}
       {(options && options.length)
-        ? options.map((option, index) => (
+        ? options.map((option: any, index: number) => (
           <Choice
             key={option.prompt + index}
             onClick={() => onChooseOption(index)}
@@ -25,14 +31,4 @@ const Space = ({ option, onChooseOption, onBack, onReset, showBackButton }) => {
         : <button onClick={onReset}>Start again</button>}
     </Container>
   );
-};
-
-Space.propTypes = {
-  option: PropTypes.object.isRequired,
-  onChooseOption: PropTypes.func.isRequired,
-  onBack: PropTypes.func.isRequired,
-  onReset: PropTypes.func.isRequired,
-  showBackButton: PropTypes.bool,
 }
-
-export default Space;
