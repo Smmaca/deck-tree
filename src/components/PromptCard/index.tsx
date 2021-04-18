@@ -21,7 +21,7 @@ export default function PromptCard({ card, onChooseCardUUID, onBack, onReset, sh
       {message && <Heading>{message}</Heading>}
       {prompts?.map((prompt) => (
         <Choice
-          key={prompt.goTo}
+          key={`${prompt.text}-${prompt.goTo}`}
           onClick={() => onChooseCardUUID(prompt.goTo)}
         >
           {prompt.text}

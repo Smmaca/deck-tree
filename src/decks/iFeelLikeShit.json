@@ -1,0 +1,86 @@
+{
+  "uuid": "7e03f76d-faad-4294-92fa-15fa18e0a9dd",
+  "name": "Self Care",
+  "cards": [
+    {
+      "uuid": "fd1ed508-73bd-4041-a9c5-66d2346942e4",
+      "message": "This is a self care guide inspired by https://youfeellikeshit.com/.",
+      "prompts": [
+        { "text": "Start", "goTo": "12287e27-e40e-4d40-8c27-35fb86b624fe" }
+      ]
+    },
+    {
+      "uuid": "12287e27-e40e-4d40-8c27-35fb86b624fe",
+      "message": "Have you eaten?",
+      "prompts": [
+        { "text": "Yes", "goTo": "b2719753-7ab5-487a-8971-ff69a0d4da97" },
+        { "text": "No", "goTo": "879c5cbc-4018-47dd-869a-3da80d216b6e" }
+      ]
+    },
+    {
+      "uuid": "879c5cbc-4018-47dd-869a-3da80d216b6e",
+      "message": "Fix yourself a snack. Aim for something as healthy as possible but if it's too difficult, any food is better than nothing.",
+      "prompts": [
+        { "text": "I've eaten", "goTo": "b2719753-7ab5-487a-8971-ff69a0d4da97" }
+      ]
+    },
+    {
+      "uuid": "b2719753-7ab5-487a-8971-ff69a0d4da97",
+      "message": "Have you taken your medication?",
+      "prompts": [
+        { "text": "Yes", "goTo": "a5fa3963-06b4-4332-a413-e25221ff9e87" },
+        { "text": "No", "goTo": "d5e0dcaa-e4e7-4d55-b10b-fa3c8f9fcf4f" },
+        { "text": "I don't take medication", "goTo": "a5fa3963-06b4-4332-a413-e25221ff9e87" }
+      ]
+    },
+    {
+      "uuid": "d5e0dcaa-e4e7-4d55-b10b-fa3c8f9fcf4f",
+      "message": "Go take it now!",
+      "prompts": [
+        { "text": "Done", "goTo": "a5fa3963-06b4-4332-a413-e25221ff9e87" }
+      ]
+    },
+    {
+      "uuid": "a5fa3963-06b4-4332-a413-e25221ff9e87",
+      "message": "Drink a glass of water if you haven't already.",
+      "prompts": [
+        { "text": "Ok, done", "goTo": "057874b2-45ed-4af4-beab-24b8d85f6f3c" }
+      ]
+    },
+    {
+      "uuid": "057874b2-45ed-4af4-beab-24b8d85f6f3c",
+      "message": "Are you tired?",
+      "prompts": [
+        { "text": "Yes", "goTo": "e1fa1cc8-0ea4-40e8-bd42-3f8142968bf2" },
+        { "text": "No", "goTo": "d215b66e-8b2c-4499-b98c-276ebb151560" }
+      ]
+    },
+    {
+      "uuid": "e1fa1cc8-0ea4-40e8-bd42-3f8142968bf2",
+      "message": "Can you take a quick nap?",
+      "prompts": [
+        { "text": "Yes", "goTo": "2509a538-25e2-4e4d-9113-a42916642190" },
+        { "text": "No", "goTo": "83c7d3de-b9da-4e4a-8772-e6d8fc57bebf" }
+      ]
+    },
+    {
+      "uuid": "2509a538-25e2-4e4d-9113-a42916642190",
+      "message": "Set a timer for twenty minutes and find a quiet, cool and comfortable place to rest. Continue this guide when you're ready.",
+      "prompts": [
+        { "text": "I've finished my nap", "goTo": "d215b66e-8b2c-4499-b98c-276ebb151560" }
+      ]
+    },
+    {
+      "uuid": "83c7d3de-b9da-4e4a-8772-e6d8fc57bebf",
+      "message": "Instead of a nap, find a quiet place where you won't be disturbed and close your eyes for a few minutes to rest yourself.",
+      "prompts": [
+        { "text": "I've finished", "goTo": "d215b66e-8b2c-4499-b98c-276ebb151560" }
+      ]
+    },
+    {
+      "uuid": "d215b66e-8b2c-4499-b98c-276ebb151560",
+      "message": "You have finished this quick self care guide. See https://youfeellikeshit.com/ for a more detailed version.",
+      "prompts": []
+    }
+  ]
+}

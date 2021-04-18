@@ -21,7 +21,7 @@
     },
     {
       "uuid": "29627c8c-3010-4963-887e-b3c3b0071399",
-      "message": "I don't give a fuck. Go do it.",
+      "message": "Go do it.",
       "prompts": []
     },
     {
@@ -64,7 +64,7 @@
       "uuid": "f8947855-161f-4fbe-8d71-e6ffdbfdfe31",
       "message": "Why don't you want to go?",
       "prompts": [
-        { "text": "I'm introverted", "goTo": "03648a46-813a-49a7-85aa-e139a84421be" },
+        { "text": "I'm shy", "goTo": "03648a46-813a-49a7-85aa-e139a84421be" },
         { "text": "My friends aren't going", "goTo": "49032d0f-de16-47e9-99ca-ade9c6b7179b" },
         { "text": "I'm unwell", "goTo": "dd82a6ae-4b4e-4fb2-91b5-d3de579eeaf3" }
       ]
@@ -89,20 +89,7 @@
     },
     {
       "uuid": "984533cf-f0cc-4663-80c2-b8233719fe8b",
-      "message": "Oh dear. Do you really need to go?",
-      "prompts": [
-        { "text": "Not really", "goTo": "402d38d0-1d3d-44a7-94d8-395d3d5bc606" },
-        { "text": "Unfortunately, yes", "goTo": "0351c7b2-9baf-4d86-a481-4da2c42a38f3" }
-      ]
-    },
-    {
-      "uuid": "402d38d0-1d3d-44a7-94d8-395d3d5bc606",
-      "message": "Then I don't see why you should go.",
-      "prompts": []
-    },
-    {
-      "uuid": "0351c7b2-9baf-4d86-a481-4da2c42a38f3",
-      "message": "Well I guess that's that. You have to go, so go.",
+      "message": "That sucks. Just go for as long as you can handle.",
       "prompts": []
     },
     {
@@ -110,9 +97,8 @@
       "message": "What's the problem?",
       "prompts": [
         { "text": "Headache", "goTo": "0c52bc99-8859-4f0b-924e-32ae3b0261ec" },
-        { "text": "Cold", "goTo": "cbee0ced-a669-42e7-8e61-065a0e513af2" },
-        { "text": "Flu", "goTo": "a1f877c1-fe52-413b-8718-711fb61a8047" },
-        { "text": "Cancer", "goTo": "e7e19d14-b3d7-42f2-84bc-d8932e17b70d" }
+        { "text": "Cold/Flu", "goTo": "cbee0ced-a669-42e7-8e61-065a0e513af2" },
+        { "text": "Nothing, I made it up", "goTo": "e7e19d14-b3d7-42f2-84bc-d8932e17b70d" }
       ]
     },
     {
@@ -122,17 +108,12 @@
     },
     {
       "uuid": "cbee0ced-a669-42e7-8e61-065a0e513af2",
-      "message": "Take some cold medication and be hygienic so you don't spread it.",
-      "prompts": []
-    },
-    {
-      "uuid": "a1f877c1-fe52-413b-8718-711fb61a8047",
-      "message": "That's no fun. You should rest up. No parties for you. I'm sure everyone will understand.",
+      "message": "That's no fun. You should rest up. I'm sure everyone will understand.",
       "prompts": []
     },
     {
       "uuid": "e7e19d14-b3d7-42f2-84bc-d8932e17b70d",
-      "message": "F",
+      "message": "Go to the party.",
       "prompts": []
     }
   ]
