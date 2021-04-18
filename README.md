@@ -1,5 +1,5 @@
 # Deck Tree
-Choose a deck to guide you based on your responses.
+Choose a deck to guide you based on your responses. See the app [here](https://decktree.shavaunmacarthur.com).
 
 ## Decks
 
