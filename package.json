@@ -1,6 +1,6 @@
 {
-  "name": "excuse-deck",
-  "version": "0.1.0",
+  "name": "deck-tree",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
