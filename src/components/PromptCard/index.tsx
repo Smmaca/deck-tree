@@ -18,18 +18,15 @@ export default function PromptCard({ card, onChooseCardUUID, onBack, onReset, sh
 
   return (
     <Container>
-      {showBackButton && <button onClick={onBack}>Back</button>}
       {message && <Heading>{message}</Heading>}
-      {prompts?.length
-        ? prompts.map((prompt) => (
-          <Choice
-            key={prompt.goTo}
-            onClick={() => onChooseCardUUID(prompt.goTo)}
-          >
-            {prompt.text}
-          </Choice>
-        ))
-        : <button onClick={onReset}>Start again</button>}
+      {prompts?.map((prompt) => (
+        <Choice
+          key={prompt.goTo}
+          onClick={() => onChooseCardUUID(prompt.goTo)}
+        >
+          {prompt.text}
+        </Choice>
+      ))}
     </Container>
   );
 }

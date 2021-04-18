@@ -10,6 +10,7 @@ export interface Card {
 }
 
 export interface Deck {
+  uuid: string;
   name: string;
   cards: Card[];
 }
