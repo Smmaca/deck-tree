@@ -12,9 +12,12 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  justify-content: space-between;
+`;
 
-  @media screen and (max-width: 504px) {
-    justify-content: center;
-    align-items: center;
-  }
+export const Toolbar = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 `;
